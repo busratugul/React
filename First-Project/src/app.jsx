@@ -42,9 +42,9 @@ Html kodlarını js formatında yazmak istediğimizde jsx kullanırız.Yazım ku
 
 returnun içine html kodları yazılır.
 
-eğer tek satırlık bir kod yazacaksak return() kullanılmaz.
+eğer tek satırlık bir kod yazacaksak return() de parantez kullanılmaz.
 
-etiketleri kapsayıcı bir etiket içinde kullanabiliriz.Bu div olabilir ya da reactkod bloğu <> </> olabilir.
+etiketleri kapsayıcı bir etiket içinde kullanabiliriz.Bu div olabilir ya da react kod bloğu <> </> olabilir.
 
 bazı etiketlerin kendine ait kapanış etiketleri vardır input gibi.
 
