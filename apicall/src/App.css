@@ -1,0 +1,36 @@
+#root {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-color: #f6f5f5;
+  overflow: hidden;
+}
+
+.imageList {
+  columns: 250px 5;
+  column-gap: 10px;
+}
+
+.searchDiv {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 40px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+input:focus {
+  outline: none;
+}
+
+.imageListImg {
+  width: 100%;
+  margin-bottom: 10px;
+}
