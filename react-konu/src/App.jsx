@@ -7,6 +7,9 @@ import BirdenÇokReturn from './components/BirdenÇokReturn'
 import UseEffect from './components/useEffect'
 import Routing from './Routing/routing'
 import UseReff from './components/UseRef'
+import UseMemo from './components/useMemo'
+import Callback from './components/callbackreactmemo'
+
 
 
 
@@ -81,6 +84,8 @@ const clickFnc = () => {
 
     <Routing/>
     <UseReff/>
+    <UseMemo/>
+    <Callback/>
     </div>
 
   )

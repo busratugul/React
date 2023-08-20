@@ -22,7 +22,7 @@ const UseReff = () => {
     return (
 
         <div>
-            <h1 ref={textRef}>USEREF</h1>
+            <h1 ref={textRef}>USE REF</h1>
             <button onClick={clickFunction}>COUNT</button>
 
             <input ref={inputRef} type="text" />
