@@ -28,6 +28,11 @@ function App() {
      loading?<div>Loading...</div> 
      
      :<div>
+      {
+        country?.map((Country,idx) => (
+          <div key={idx}> {Country.name.common}</div>
+        ))
+      }
 
       <Counter/>
       <CounterActions/>
