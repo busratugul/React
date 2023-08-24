@@ -5,7 +5,6 @@ const Input = forwardRef((props, ref) => {
   return <input ref= {ref} type="text" {...props}/>
 })
 
-Input = forwardRef(Input)
 
 function App() {
   const inputRef = useRef()
