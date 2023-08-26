@@ -1,14 +1,15 @@
 import ImageItem from "./imageItem";
 
-function ImageList ({imagesPlaceholder}) {
+function ImageList({imagePlaceholder}) {
     
-    return ( 
-        <div className="imageList">
-            {imagesPlaceholder.map((image,index) => {
-              return  <ImageItem key = {index} image = { image } />
-            })}
-        </div>
-     );
+  return ( 
+    <div>
+      {imagePlaceholder.map((img) => {
+        return <ImageItem image= { img }/>
+      })
+      }
+    </div>
+  )
      
 }
 
