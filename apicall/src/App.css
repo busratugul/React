@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   background-color: #f6f5f5;
-  overflow: hidden;
 }
 
 .imageList {
@@ -33,4 +32,15 @@ input:focus {
 .imageListImg {
   width: 100%;
   margin-bottom: 10px;
+}
+
+.imgList {
+  columns: 200px 5;
+  column-gap: 10px;
+}
+
+.image {
+  width: 100%;
+  background-size: cover;
+  margin-bottom: 5px;
 }

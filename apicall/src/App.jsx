@@ -15,7 +15,7 @@ function App() {
  return (
   <div className='App'>
     <SearchHeader search = { handleSubmit }/>
-    <imageList imagesPlaceholder= {images}/>
+    <ImageList imagesPlaceholder= {images}/>
   </div>
  )
 }

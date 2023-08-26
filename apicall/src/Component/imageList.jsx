@@ -1,11 +1,11 @@
 import ImageItem from "./imageItem";
 
-function ImageList({imagePlaceholder}) {
+function ImageList({imagesPlaceholder}) {
     
   return ( 
-    <div>
-      {imagePlaceholder.map((img) => {
-        return <ImageItem image= { img }/>
+    <div className="imgList">
+      {imagesPlaceholder.map((img,idx) => {
+        return <ImageItem key={idx} image= { img }/>
       })
       }
     </div>
@@ -14,4 +14,4 @@ function ImageList({imagePlaceholder}) {
 }
 
 
-export default ImageList ;
+export default ImageList 
