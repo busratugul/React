@@ -1,0 +1,16 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.Busra {
+  margin: 20px;
+  text-align: center;
+}
+
+.Onur {
+  margin: 20px;
+  text-align: center;
+}
