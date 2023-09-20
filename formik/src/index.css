@@ -62,4 +62,15 @@ button:hover {
     transform: scale(0.98);
 }
 
+.input-error {
+    border:1px solid #fc8181;
+}
+
+.error {
+    color: #fc8181;
+    font-size: 12px;
+    text-align: left;
+    margin-top: -10px;
+}
+
 
