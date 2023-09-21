@@ -23,7 +23,7 @@ form {
     width: 500px;
 }
 
-input {
+input,select {
     width: 100%;
     padding: 15px 10px;
     font-size: 16px;
@@ -72,5 +72,31 @@ button:hover {
     text-align: left;
     margin-top: -10px;
 }
+
+.customcheckbox {
+    display: flex;
+}
+
+.checkbox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 20px;
+    margin-top: 10px;
+}
+
+.span {
+    margin: 12px  5px;
+}
+
+a {
+    color: #fff;
+}
+
+a:hover {
+    color: lightblue;
+}
+
+
 
 
