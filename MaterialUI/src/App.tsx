@@ -11,6 +11,12 @@ import { LessonAccordion } from './components/LessonAccordion'
 import { LessonAppBar } from './components/LessonAppBar'
 import { LessonImgList } from './components/LessonImgList'
 import { LessonPaper } from './components/LessonPaper'
+import { LessonLink } from './components/LessonLink'
+import { LessonBreadCrumbs } from './components/LessonBreadCrumbs'
+import { LessonDrawer } from './components/LessonDrawer'
+import { LessonBadge } from './components/LessonBadge'
+import { LessonSpeedDial } from './components/LessonSpeedDial'
+import { LessonBottomNavigation } from './components/LessonBottomNavigation'
 
 function App() {
   return (
@@ -26,7 +32,13 @@ function App() {
       {/* <LessonAccordion/> */}
       {/* <LessonAppBar/> */}
       {/* <LessonImgList/> */}
-      <LessonPaper/>
+      {/* <LessonPaper/> */}
+      {/*    <LessonLink/> */}
+      {/* <LessonBreadCrumbs/> */}
+      {/* <LessonDrawer/> */}
+      {/* <LessonBadge/> */}
+      {/* <LessonSpeedDial/> */}
+      <LessonBottomNavigation/>
     
     </div>
   )
