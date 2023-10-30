@@ -17,6 +17,7 @@ import { LessonDrawer } from './components/LessonDrawer'
 import { LessonBadge } from './components/LessonBadge'
 import { LessonSpeedDial } from './components/LessonSpeedDial'
 import { LessonBottomNavigation } from './components/LessonBottomNavigation'
+import { LessonSnackBar } from './components/LessonSnackBar'
 
 function App() {
   return (
@@ -38,7 +39,8 @@ function App() {
       {/* <LessonDrawer/> */}
       {/* <LessonBadge/> */}
       {/* <LessonSpeedDial/> */}
-      <LessonBottomNavigation/>
+      {/* <LessonBottomNavigation/> */}
+      <LessonSnackBar/>
     
     </div>
   )
