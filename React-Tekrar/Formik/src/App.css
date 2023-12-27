@@ -1,0 +1,26 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.signup label {
+  display: block;
+}
+
+button {
+ display: block;
+ margin: 10px auto;
+}
+
+span{
+  display: block;
+  cursor: pointer;
+}
+
+.error {
+  font-size: 10px;
+  color: red;
+  font-weight: bold;
+}
