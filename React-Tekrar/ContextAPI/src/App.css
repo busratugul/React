@@ -1,0 +1,30 @@
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.App {
+  height: 100vh;
+  margin-top: -20px;
+}
+
+.dark {
+  background-color: black;
+  color: #fff;
+}
+
+.light {
+  background-color: #fff;
+  color: black;
+}
+
+button {
+  cursor: pointer;
+}
+
+.light button {
+  background-color: gray;
+  color: #fff;
+}
