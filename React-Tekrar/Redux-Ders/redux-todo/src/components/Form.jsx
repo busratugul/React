@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addTodo } from '../redux/slices/todosSlice'
-import {nanoid} from '@reduxjs/toolkit'
+
 
 function Form() {
   const [content, setContent] = useState('')
@@ -10,7 +10,7 @@ function Form() {
   const handleSubmit = (e) => {
     e.preventDefault()
     if (content) {
-      dispatch(addTodo({ id: nanoid(), content: content, completed: false }))
+      dispatch(addTodo({ content }))
       setContent('')
     }
   }
