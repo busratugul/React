@@ -8,8 +8,8 @@ import Error from './Error'
 function Form() {
   const [content, setContent] = useState('')
   const dispatch = useDispatch()
-  const isLoading = useSelector(state => state.todos.addNewTodoIsLoading)
-  const error = useSelector(state => state.todos.addNewTodoError)
+  const isLoading = useSelector(state => state.todos.addNewTodo.isLoading)
+  const error = useSelector(state => state.todos.addNewTodo.error)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
