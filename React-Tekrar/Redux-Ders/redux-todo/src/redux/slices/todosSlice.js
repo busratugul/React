@@ -4,10 +4,15 @@ import axios from 'axios'
 export const getTodoAsync = createAsyncThunk(
   'todos/getTodosAsync/',
   async () => {
-    const res = await axios('http://localhost:7000/todos')
+    const res = await axios(`${process.env.REACT_APP_API_BASE_ENDPOINT}/todos`)
     return res.data
   }
 )
+
+export const addTodoAsync = createAsyncThunk('todos/addTodoAsync', async (data) => {
+  const res = await axios.post(`${process.env.REACT_APP_API_BASE_ENDPOINT}/todos`, data)
+  return res.data
+})
 
 export const todosSlice = createSlice({
   name: 'todos',
@@ -16,6 +21,8 @@ export const todosSlice = createSlice({
     isLoading: false,
     error: null,
     activeFilter: 'All',
+    addNewTodoIsLoading: false,
+    addNewTodoError: null
   },
   reducers: {
     toggle: (state, action) => {
@@ -55,6 +62,19 @@ export const todosSlice = createSlice({
       state.error = action.error.message
       state.isLoading = false
     })
+    //todos ADD
+    builder.addCase(addTodoAsync.pending, (state) => {
+      state.addNewTodoIsLoading = true
+    })
+    builder.addCase(addTodoAsync.fulfilled, (state,action) => {
+      state.items.push(action.payload)
+      state.addNewTodoIsLoading = false
+      state.isLoading = false
+    })
+    builder.addCase(addTodoAsync.rejected, (state, action) => {
+      state.addNewTodoError = action.error.message
+      state.addNewTodoIsLoading = false
+    })
   },
 })
 
@@ -70,6 +90,6 @@ export const selectFilteredTodos = (state) => {
   )
 }
 
-export const { addTodo, toggle, destroy, changeActiveFilter, clearCompleted } =
+export const { toggle, destroy, changeActiveFilter, clearCompleted } =
   todosSlice.actions
 export default todosSlice.reducer
