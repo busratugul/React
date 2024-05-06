@@ -1,11 +1,11 @@
 import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import { selectFilteredTodos } from '../redux/slices/todosSlice'
 import {
-  selectFilteredTodos,
   getTodoAsync,
   toggleTodoAsync,
-  removeTodoAsync
-} from '../redux/slices/todosSlice'
+  removeTodoAsync,
+} from '../redux/slices/services'
 import Loading from './Loading'
 import Error from './Error'
 
@@ -19,12 +19,12 @@ function TodoList() {
     dispatch(getTodoAsync())
   }, [dispatch])
 
-  const handleToggle = async (id, completed) => {
-    await dispatch(toggleTodoAsync({ id, data: { completed } }))
+  const handleToggle = (id, completed) => {
+    dispatch(toggleTodoAsync({ id, data: { completed } }))
   }
 
   const handleDestroy = (id) => {
-    if(window.confirm("Are you sure?")){
+    if (window.confirm('Are you sure?')) {
       dispatch(removeTodoAsync(id))
     }
   }
