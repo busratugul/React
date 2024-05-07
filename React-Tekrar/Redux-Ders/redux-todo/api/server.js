@@ -57,6 +57,13 @@ app.patch('/todos/:id', (req, res) => {
   }
   return res.send(todos[index]);
 });
+//todo completed olanları siler
+app.put("/todos", (req, res) => {
+  const itemCompleted = req.body.clearCompleted
+  const items = todos.filter((item) => item.completed === false)
+  todos = items
+  return res.send(items)
+});
 //todo siler
 app.delete('/todos/:id', (req, res) => {
   const id = req.params.id;

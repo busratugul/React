@@ -1,5 +1,5 @@
 import { createSlice} from '@reduxjs/toolkit'
-import { getTodoAsync, addTodoAsync, toggleTodoAsync, removeTodoAsync } from './services'
+import { getTodoAsync, addTodoAsync, toggleTodoAsync, removeTodoAsync, clearCompletedTodosAsync } from './services'
 
 export const todosSlice = createSlice({
   name: 'todos',
@@ -7,7 +7,7 @@ export const todosSlice = createSlice({
     items: [],
     isLoading: false,
     error: null,
-    activeFilter: localStorage.getItem("activeFilter"),
+    activeFilter: localStorage.getItem("activeFilter") || "All",
     addNewTodo: {
       isLoading: false,
       error: false
@@ -17,11 +17,7 @@ export const todosSlice = createSlice({
   reducers: {
     changeActiveFilter: (state, action) => {
       state.activeFilter = action.payload
-    },
-    clearCompleted: (state) => {
-      const filtered = state.items.filter((item) => item.completed === false)
-      state.items = filtered
-    },
+    }
   },
   extraReducers: (builder) => {
     //todos GET
@@ -62,6 +58,11 @@ export const todosSlice = createSlice({
       state.items = filtered
       /* const index = state.items.findIndex((item) => item.id === id)
       state.items.splice(index,1) */
+    })
+    //todos CLEAR COMPLETED
+    builder.addCase(clearCompletedTodosAsync.fulfilled, (state, action) => {
+      console.log(action.payload);
+      state.items = action.payload
     })
   },
 })
